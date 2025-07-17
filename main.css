@@ -5,36 +5,59 @@
 }
 
 body {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     overflow-x: hidden;
 }
 
+.blue-color {
+    color: #4bcaff;
+}
+
+h1 {
+    font-weight: normal;
+    margin: 20px 0px;
+    font-size: 2.4em;
+}
 
 .header-nav {
     
     display: flex;
     justify-content: center;
+    background-color: #35444f;
     
-    gap: 10px;
     align-items: center;
     margin: 0 auto;
     
 }
+
+
 
 ul {
   list-style-type: none;
     padding-inline-start: 0px;
 }
 
- .header nav, .header ul {
+ .header nav, .header-nav, .header-nav li, .header-nav a {
     height: 35px;
 }
 
-header nav {
-    
-    background-color: #35444f;
-    
+
+.header-nav a {
+    color: white;
+    font-size: 0.7rem;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-out;
+    border-left: 1px solid #35444f;
+    border-right: 1px solid #35444f;
+}
+
+.header-nav a:hover {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: #222f3a;
 }
 
 li {
@@ -48,8 +71,8 @@ header {
 
 aside {
   border: 1px solid black;
-  width: 180px;
-  height: 200px;
+  width: 210px;
+  height: 201px;
 }
 
 .aside-nav {
@@ -65,17 +88,65 @@ aside {
     
 }
 
-.aside-nav a {
-    display: inline-block;
-    transition: background-color 1s ease;
-    width: 100%;
+.aside-nav li {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.aside-nav a:hover {
-    background-color: grey;
+.aside-nav a {
+    display: inline-block;
+    transition: all 0.5s ease;
+    width: calc(100% + 40px);
+    padding: 13px 0px 10px 65px;
+    position: relative;
+    left: -20px;
+    font-size: 0.85rem;
+    color: rgb(86, 85, 85);
+    
+    
     
 }
 
+.aside-nav a:hover {
+    background-color: lightgrey;
+    transform: translate(15px, 0px);
+    color: black;
+}
+
+
+
 a {
     text-decoration: none;
+}
+
+main {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 210px auto;
+    width: 100%;
+}
+
+.main-container {
+    border: 1px solid black;
+    width: calc(100% - 250px);
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-sp
+}
+
+
+
+.main-container img {
+    width: 38%;
+    transition: all 0.6s ease-out;
+    
+
+}
+
+.main-container img:hover {
+  transform: scale(1.1,1.1);
 }
